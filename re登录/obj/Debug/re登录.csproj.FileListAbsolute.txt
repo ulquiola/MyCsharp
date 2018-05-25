@@ -1,0 +1,9 @@
+c:\users\admin\documents\visual studio 2013\Projects\re登录\bin\Debug\re登录.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.Form1.resources
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\re登录\bin\Debug\re登录.exe
+c:\users\admin\documents\visual studio 2013\Projects\re登录\bin\Debug\re登录.pdb
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.exe
+c:\users\admin\documents\visual studio 2013\Projects\re登录\obj\Debug\re登录.pdb

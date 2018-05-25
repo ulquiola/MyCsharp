@@ -1,0 +1,8 @@
+c:\users\admin\documents\visual studio 2013\Projects\listview\bin\Debug\listview.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\listview\bin\Debug\listview.exe
+c:\users\admin\documents\visual studio 2013\Projects\listview\bin\Debug\listview.pdb
+c:\users\admin\documents\visual studio 2013\Projects\listview\obj\Debug\listview.Form1.resources
+c:\users\admin\documents\visual studio 2013\Projects\listview\obj\Debug\listview.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\listview\obj\Debug\listview.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\listview\obj\Debug\listview.exe
+c:\users\admin\documents\visual studio 2013\Projects\listview\obj\Debug\listview.pdb
