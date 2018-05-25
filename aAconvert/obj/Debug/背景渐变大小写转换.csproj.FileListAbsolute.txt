@@ -1,0 +1,9 @@
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\bin\Debug\背景渐变大小写转换.exe.config
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\bin\Debug\背景渐变大小写转换.exe
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\bin\Debug\背景渐变大小写转换.pdb
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.Form1.resources
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.Properties.Resources.resources
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.csproj.GenerateResource.Cache
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.exe
+c:\users\admin\documents\visual studio 2013\Projects\背景渐变大小写转换\obj\Debug\背景渐变大小写转换.pdb
