@@ -61,9 +61,7 @@ namespace calculator
                     break;
                 default:
                     break;
-
             }
-
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -76,65 +74,5 @@ namespace calculator
             result.Clear();
             value = 0;
         }
-          //另一种方式实现操作
-         //
-        //
-      /*  private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            switch(e.KeyChar.ToString())
-            {
-                case"1":
-                    one.PerformClick();
-                    break;
-                case "2":
-                    two.PerformClick();
-                    break;
-                case "3":
-                    three.PerformClick();
-                    break;
-                case "4":
-                    four.PerformClick();
-                    break;
-                case "5":
-                    five.PerformClick();
-                    break;
-                case "6":
-                    six.PerformClick();
-                    break;
-                case "7":
-                    seven.PerformClick();
-                    break;
-                case "8":
-                    eight.PerformClick();
-                    break;
-                case "9":
-                    nine.PerformClick();
-                    break;
-                case "0":
-                    zero.PerformClick();
-                    break;
-                case ".":
-                    point.PerformClick();
-                    break;
-                case "+":
-                    add.PerformClick();
-                    break;
-                case "-":
-                    sub.PerformClick();
-                    break;
-                case "*":
-                    mul.PerformClick();
-                    break;
-                case "/":
-                    div.PerformClick();
-                    break;
-                case "=":
-                    equal.PerformClick();
-                    break;
-                default:
-                    break;
-            }
-        }*/
-
     }
 }

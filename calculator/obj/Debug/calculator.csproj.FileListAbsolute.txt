@@ -1,0 +1,9 @@
+E:\repository\MyGit\calculator\bin\Debug\calculator.exe.config
+E:\repository\MyGit\calculator\bin\Debug\calculator.exe
+E:\repository\MyGit\calculator\bin\Debug\calculator.pdb
+E:\repository\MyGit\calculator\obj\Debug\calculator.csprojResolveAssemblyReference.cache
+E:\repository\MyGit\calculator\obj\Debug\calculator.Form1.resources
+E:\repository\MyGit\calculator\obj\Debug\calculator.Properties.Resources.resources
+E:\repository\MyGit\calculator\obj\Debug\calculator.csproj.GenerateResource.Cache
+E:\repository\MyGit\calculator\obj\Debug\calculator.exe
+E:\repository\MyGit\calculator\obj\Debug\calculator.pdb
