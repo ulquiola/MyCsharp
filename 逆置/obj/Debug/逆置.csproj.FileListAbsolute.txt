@@ -1,0 +1,6 @@
+E:\repository\MyGit\逆置\bin\Debug\逆置.exe.config
+E:\repository\MyGit\逆置\bin\Debug\逆置.exe
+E:\repository\MyGit\逆置\bin\Debug\逆置.pdb
+E:\repository\MyGit\逆置\obj\Debug\逆置.csprojResolveAssemblyReference.cache
+E:\repository\MyGit\逆置\obj\Debug\逆置.exe
+E:\repository\MyGit\逆置\obj\Debug\逆置.pdb
