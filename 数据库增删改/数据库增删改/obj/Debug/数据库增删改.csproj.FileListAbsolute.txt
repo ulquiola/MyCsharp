@@ -1,0 +1,9 @@
+E:\repository\MyGit\数据库增删改\数据库增删改\bin\Debug\数据库增删改.exe.config
+E:\repository\MyGit\数据库增删改\数据库增删改\bin\Debug\数据库增删改.exe
+E:\repository\MyGit\数据库增删改\数据库增删改\bin\Debug\数据库增删改.pdb
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.csprojResolveAssemblyReference.cache
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.Form1.resources
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.Properties.Resources.resources
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.csproj.GenerateResource.Cache
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.exe
+E:\repository\MyGit\数据库增删改\数据库增删改\obj\Debug\数据库增删改.pdb
