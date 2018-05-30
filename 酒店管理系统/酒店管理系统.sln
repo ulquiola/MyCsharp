@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "登录连接数据库", "登录连接数据库\登录连接数据库.csproj", "{E2B55BB6-BACA-4BB8-97C7-7BE7C2140515}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "酒店管理系统", "酒店管理系统\酒店管理系统.csproj", "{FBC83A2C-17FA-47F5-BF24-FDE4D80E4C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E2B55BB6-BACA-4BB8-97C7-7BE7C2140515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2B55BB6-BACA-4BB8-97C7-7BE7C2140515}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2B55BB6-BACA-4BB8-97C7-7BE7C2140515}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2B55BB6-BACA-4BB8-97C7-7BE7C2140515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC83A2C-17FA-47F5-BF24-FDE4D80E4C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC83A2C-17FA-47F5-BF24-FDE4D80E4C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC83A2C-17FA-47F5-BF24-FDE4D80E4C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC83A2C-17FA-47F5-BF24-FDE4D80E4C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

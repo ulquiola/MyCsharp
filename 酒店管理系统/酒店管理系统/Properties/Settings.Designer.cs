@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace 登录连接数据库.Properties
+namespace 酒店管理系统.Properties
 {
 
 
