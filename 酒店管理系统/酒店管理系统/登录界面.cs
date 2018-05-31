@@ -19,7 +19,7 @@ namespace 酒店管理系统
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {           
             if(radioButton1.Checked)
             {
                 string Sql = "Data Source=localhost;Initial Catalog=administrators;Integrated Security=True";
@@ -60,7 +60,8 @@ namespace 酒店管理系统
                 sdr.Read();
                 if (sdr.HasRows)
                 {
-                    MessageBox.Show("登陆成功！！！");
+                    Form4 form4 = new Form4();
+                    form4.Show();
                 }
                 else
                 {
