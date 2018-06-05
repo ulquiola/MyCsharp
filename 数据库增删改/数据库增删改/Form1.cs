@@ -21,37 +21,39 @@ namespace 数据库增删改
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string SqlStr = "Data Source=localhost;Initial Catalog=student;Integrated Security=True";
-            con = new SqlConnection(SqlStr);
+            string Sql = "Data Source=localhost;Initial Catalog=userinfo;Integrated Security=True";
+            con = new SqlConnection(Sql);
             if(con.State==ConnectionState.Closed)
             {
                 con.Open();
             }
-         }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "insert into Student values('"+textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"')";
-            cmd.ExecuteNonQuery();             
+            cmd.CommandText = "insert into userinfo values('"+textBox1.Text.Trim()+"','"+textBox2.Text.Trim()+"')";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("添加成功！");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "delete from Student where Sno='"+textBox1.Text+"'";
-            cmd.ExecuteNonQuery(); 
+            cmd.CommandText = "delete from userinfo where userName='" + textBox1.Text.Trim() + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("删除成功！");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "update Student set Sname='"+textBox2.Text+"',Sage='"
-                +textBox3.Text+"'where Sno='"+textBox1.Text+"'";
-            cmd.ExecuteNonQuery(); 
+            cmd.CommandText = "update userinfo set userPassword='"+textBox2.Text.Trim()+"' where userName='" + textBox1.Text.Trim() + "'";
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("修改成功！");
         }
     }
 }

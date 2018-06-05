@@ -1,0 +1,9 @@
+E:\repository\MyGit\图形验证码\图形验证码\bin\Debug\图形验证码.exe.config
+E:\repository\MyGit\图形验证码\图形验证码\bin\Debug\图形验证码.exe
+E:\repository\MyGit\图形验证码\图形验证码\bin\Debug\图形验证码.pdb
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.csprojResolveAssemblyReference.cache
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.Form1.resources
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.Properties.Resources.resources
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.csproj.GenerateResource.Cache
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.exe
+E:\repository\MyGit\图形验证码\图形验证码\obj\Debug\图形验证码.pdb

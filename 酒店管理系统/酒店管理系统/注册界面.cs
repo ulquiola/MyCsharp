@@ -26,7 +26,7 @@ namespace 酒店管理系统
             {
                 con.Open();
             }
-            if (textBox1.Text == "" || textBox3.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "")
             {
                 MessageBox.Show("请输入用户名或密码！！！");
             }
@@ -34,7 +34,7 @@ namespace 酒店管理系统
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from users where name='" + textBox1.Text.Trim() + "'";
+                cmd.CommandText = "select * from users where username='" + textBox1.Text.Trim() + "'";
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
                 if (sdr.HasRows)
@@ -45,13 +45,31 @@ namespace 酒店管理系统
                 else
                 {
                     cmd.CommandText = "insert into users values('" + textBox1.Text.Trim()
-                        + "','" + textBox3.Text.Trim() + "')";
+                        + "','" + textBox2.Text.Trim() + "','" + textBox3.Text.Trim()
+                        + "','" + textBox4.Text.Trim() + "','" + textBox5.Text.Trim()
+                        + "','" + textBox6.Text.Trim()+ "')";
                     MessageBox.Show("注册成功！！！");
                     sdr.Close();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                button1.Focus();
+            }
+        }               
     }
 }
 
