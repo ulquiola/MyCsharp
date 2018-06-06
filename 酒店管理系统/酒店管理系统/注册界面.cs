@@ -20,7 +20,7 @@ namespace 酒店管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Sql = "Data Source=localhost;Initial Catalog=users;Integrated Security=True";
+            string Sql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
             SqlConnection con = new SqlConnection(Sql);
             if (con.State == ConnectionState.Closed)
             {
@@ -64,6 +64,38 @@ namespace 酒店管理系统
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                textBox3.Focus();
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                textBox4.Focus();
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                textBox5.Focus();
+            }
+        }
+
+        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                textBox6.Focus();
+            }
+        }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
             {

@@ -22,7 +22,7 @@ namespace 酒店管理系统
         {           
             if(radioButton1.Checked)
             {
-                string Sql = "Data Source=localhost;Initial Catalog=administrators;Integrated Security=True";
+                string Sql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
                 SqlConnection con = new SqlConnection(Sql);
                 if(con.State==ConnectionState.Closed)
                 {
@@ -46,7 +46,7 @@ namespace 酒店管理系统
             }
             if(radioButton2.Checked)
             {
-                string Sql = "Data Source=localhost;Initial Catalog=users;Integrated Security=True";
+                string Sql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
                 SqlConnection con = new SqlConnection(Sql);
                 if (con.State == ConnectionState.Closed)
                 {

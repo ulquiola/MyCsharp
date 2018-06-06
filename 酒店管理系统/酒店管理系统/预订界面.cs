@@ -14,7 +14,7 @@ namespace 酒店管理系统
     public partial class Form4 : Form
     {
         SqlConnection con;
-        string Sql = "Data Source=localhost;Initial Catalog=room;Integrated Security=True";
+        string Sql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
         public Form4()
         {
             InitializeComponent();
@@ -86,7 +86,7 @@ namespace 酒店管理系统
             //MessageBox.Show("该房间正在使用中，请更换!"); 
             //切换用户预定房间表users
             //
-            string Bsql = "Data Source=localhost;Initial Catalog=users;Integrated Security=True";
+            string Bsql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
             SqlConnection conn = new SqlConnection(Bsql);
             SqlCommand Bcmd = new SqlCommand();
             Bcmd.Connection = conn;
