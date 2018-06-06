@@ -44,10 +44,10 @@ namespace 酒店管理系统
                 }               
                 else
                 {
-                    cmd.CommandText = "insert into users values('" + textBox1.Text.Trim()
-                        + "','" + textBox2.Text.Trim() + "','" + textBox3.Text.Trim()
-                        + "','" + textBox4.Text.Trim() + "','" + textBox5.Text.Trim()
-                        + "','" + textBox6.Text.Trim()+ "')";
+                    cmd.CommandText = "insert into users(username,psw,name,age,idnumber,workunit) values('" + textBox1.Text.Trim()
+                                   + "','" + textBox2.Text.Trim() + "','" + textBox3.Text.Trim()
+                                   + "','" + textBox4.Text.Trim() + "','" + textBox5.Text.Trim()
+                                   + "','" + textBox6.Text.Trim() + "')";
                     MessageBox.Show("注册成功！！！");
                     sdr.Close();
                     cmd.ExecuteNonQuery();

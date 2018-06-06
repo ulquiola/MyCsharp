@@ -95,7 +95,7 @@ namespace 酒店管理系统
                 conn.Open();
             }            
             Bcmd.CommandText = "update users set Bidroom='"+textBox1.Text+"',Bday='"+textBox3.Text+
-                "',Bmoney='"+textBox4.Text+"'where username='"+textBox5.Text.Trim()+"'";
+                "',Bmoney='"+textBox4.Text+"'where username='"+Form2.username+"'";
             Bcmd.ExecuteNonQuery();
             MessageBox.Show("预订成功！");
             //cmd.CommandText = "update room set using='yes'where idroom='"+textBox1.Text+"'";

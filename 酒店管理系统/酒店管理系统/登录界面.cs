@@ -13,13 +13,15 @@ namespace 酒店管理系统
 {
     public partial class Form2 : Form
     {
+        public static string username;
         public Form2()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {           
+        {
+            username = textBox1.Text.Trim();
             if(radioButton1.Checked)
             {
                 string Sql = "Data Source=localhost;Initial Catalog=HotelManagementSystem;Integrated Security=True";
