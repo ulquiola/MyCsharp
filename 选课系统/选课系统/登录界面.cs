@@ -13,6 +13,7 @@ namespace 选课系统
 {
     public partial class Form2 : Form
     {
+        static public string  Sid;
         SqlConnection con;
         public Form2()
         {
@@ -31,7 +32,10 @@ namespace 选课系统
                 sdr.Read();
                 if (sdr.HasRows)
                 {
-                    MessageBox.Show("success");
+                    Form4 frm4 = new Form4();
+                    frm4.Show();
+                    this.Hide();
+                    Sid =textBox1.Text;
                 }
                 else
                 {
@@ -47,8 +51,10 @@ namespace 选课系统
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
                 if (sdr.HasRows)
-                {
-                    MessageBox.Show("success");
+                {                    
+                    Form5 frm5 = new Form5();
+                    frm5.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -65,7 +71,9 @@ namespace 选课系统
                 sdr.Read();
                 if (sdr.HasRows)
                 {
-                    MessageBox.Show("success");
+                    Form7 frm7 = new Form7();
+                    frm7.Show();
+                    this.Hide();
                 }
                 else
                 {

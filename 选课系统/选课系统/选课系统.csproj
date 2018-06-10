@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="学生选课信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生选课信息.Designer.cs">
+      <DependentUpon>学生选课信息.cs</DependentUpon>
+    </Compile>
     <Compile Include="学生选课界面.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,15 @@
     <Compile Include="登录界面.Designer.cs">
       <DependentUpon>登录界面.cs</DependentUpon>
     </Compile>
+    <Compile Include="管理员界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员界面.Designer.cs">
+      <DependentUpon>管理员界面.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="学生选课信息.resx">
+      <DependentUpon>学生选课信息.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="学生选课界面.resx">
       <DependentUpon>学生选课界面.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="登录界面.resx">
       <DependentUpon>登录界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员界面.resx">
+      <DependentUpon>管理员界面.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

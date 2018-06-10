@@ -44,14 +44,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(167, 27);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(173, 21);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(167, 72);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.Size = new System.Drawing.Size(173, 21);
             this.textBox2.TabIndex = 1;
             // 
             // label1
@@ -85,7 +85,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(167, 117);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.Size = new System.Drawing.Size(173, 21);
             this.textBox3.TabIndex = 5;
             // 
             // groupBox1

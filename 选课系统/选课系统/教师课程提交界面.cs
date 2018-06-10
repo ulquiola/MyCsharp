@@ -22,10 +22,26 @@ namespace 选课系统
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "insert into courseinfo(courseid,coursename,teacher,instructions) values('" +
-                textBox1.Text.Trim() + "','" + textBox2.Text.Trim() + "','" + textBox3.Text.Trim() + "','"+richTextBox1.Text+"')";
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("提交成功！");
+            cmd.CommandText = "select * from courseinfo where courseid='" + textBox1.Text.Trim() + "'";
+            SqlDataReader sda=cmd.ExecuteReader();
+            sda.Read();
+            if(sda.HasRows)
+            {
+                cmd.CommandText = "update  courseinfo set coursename='" + textBox2.Text.Trim()
+                    + "',teacher='" + textBox3.Text.Trim() + "',instructions='" + richTextBox1.Text
+                    + "'where courseid='" +textBox1.Text.Trim() + "'";
+                sda.Close();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("修改成功！");
+            }
+            else
+            {
+                cmd.CommandText = "insert into courseinfo(courseid,coursename,teacher,instructions) values('" +
+                textBox1.Text.Trim() + "','" + textBox2.Text.Trim() + "','" + textBox3.Text.Trim() + "','" + richTextBox1.Text + "')";               
+                sda.Close();
+                MessageBox.Show("提交成功！");
+                cmd.ExecuteNonQuery();
+            }
         }
 
         private void Form5_Load(object sender, EventArgs e)
