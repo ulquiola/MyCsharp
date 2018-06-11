@@ -36,17 +36,19 @@ namespace 选课系统
                     frm4.Show();
                     this.Hide();
                     Sid =textBox1.Text;
+                    sdr.Close();
                 }
                 else
                 {
                     MessageBox.Show("密码错误，请重试");
+                    sdr.Close();
                 }
             }          
             if(radioButton2.Checked)
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from studentinfo where StudentID='" +
+                cmd.CommandText = "select * from teacherinfo where TeacherID='" +
                     textBox1.Text.Trim() + "'and password='" + textBox2.Text.Trim() + "'";
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
@@ -55,17 +57,19 @@ namespace 选课系统
                     Form5 frm5 = new Form5();
                     frm5.Show();
                     this.Hide();
+                    sdr.Close();
                 }
                 else
                 {
                     MessageBox.Show("密码错误，请重试");
+                    sdr.Close();
                 }
             }
             if(radioButton3.Checked)
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from studentinfo where StudentID='" +
+                cmd.CommandText = "select * from administrtors where adminID='" +
                     textBox1.Text.Trim() + "'and password='" + textBox2.Text.Trim() + "'";
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
@@ -74,10 +78,12 @@ namespace 选课系统
                     Form7 frm7 = new Form7();
                     frm7.Show();
                     this.Hide();
+                    sdr.Close();
                 }
                 else
                 {
                     MessageBox.Show("密码错误，请重试");
+                    sdr.Close();
                 }
             }
         }

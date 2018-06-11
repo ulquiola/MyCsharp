@@ -35,6 +35,7 @@ namespace 选课系统
         private void button1_Click(object sender, EventArgs e)
         {
             i1 = 1;
+            j = 0; k = 0; l = 0;
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
             con = new SqlConnection(Sql);            
                 con.Open();           
@@ -66,6 +67,7 @@ namespace 选课系统
         private void button2_Click(object sender, EventArgs e)
         {
             j = 1;
+            i1 = 0; k = 0; l = 0;
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
             con = new SqlConnection(Sql);            
                 con.Open();            
@@ -97,6 +99,7 @@ namespace 选课系统
         private void button3_Click(object sender, EventArgs e)
         {
             k = 1;
+            i1 = 0; j = 0; l = 0;
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
             con = new SqlConnection(Sql);            
                 con.Open();           
@@ -128,6 +131,7 @@ namespace 选课系统
         private void button4_Click(object sender, EventArgs e)
         {
             l = 1;
+            i1 = 0; j = 0; k = 0;
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
             con = new SqlConnection(Sql);
             con.Open();
@@ -158,34 +162,34 @@ namespace 选课系统
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(i1==1)
+            if(i1>0)
             {
                 if (e.RowIndex >= 0)
                 {
-                    int intID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    string ID = (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     con = new SqlConnection(Sql);
-                    SqlDataAdapter sda = new SqlDataAdapter("select * from studentinfo where num=" + intID + "", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("select * from studentinfo where studentid=" + ID + "", con);
                     DataSet myds = new DataSet();
                     sda.Fill(myds);
                     if (myds.Tables[0].Rows.Count > 0)
                     {
-                        Sid = myds.Tables[0].Rows[0][1].ToString();
+                        Sid = myds.Tables[0].Rows[0][0].ToString();
                     }
                 }
             }
-            if(j==1)
+            if(j>0)
             {
-                int intID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                string ID = (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                 con = new SqlConnection(Sql);
-                SqlDataAdapter sda = new SqlDataAdapter("select * from teacherinfo where num=" + intID + "", con);
+                SqlDataAdapter sda = new SqlDataAdapter("select * from teacherinfo where teacherid=" + ID + "", con);
                 DataSet myds = new DataSet();
                 sda.Fill(myds);
                 if (myds.Tables[0].Rows.Count > 0)
                 {
-                    Tid = myds.Tables[0].Rows[0][1].ToString();
+                    Tid = myds.Tables[0].Rows[0][0].ToString();
                 }
             }
-            if(k==1)
+            if(k>0)
             {
                 if (e.RowIndex >= 0)
                 {
@@ -200,7 +204,7 @@ namespace 选课系统
                     }
                 }
             }
-            if(l==1)
+            if(l>0)
             {
                 if (e.RowIndex >= 0)
                 {
@@ -219,7 +223,7 @@ namespace 选课系统
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(i1==1)
+            if(i1>0)
             {
                 Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
                 con = new SqlConnection(Sql);
@@ -229,8 +233,34 @@ namespace 选课系统
                 cmd.CommandText = "delete from studentinfo where studentid='" + Sid + "'";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("删除学生成功！");
+                //
+                //刷新
+                //
+                SqlDataAdapter sda = new SqlDataAdapter("select * from studentinfo", con);
+                DataSet myds = new DataSet();
+                sda.Fill(myds);
+                dataGridView1.DataSource = myds.Tables[0];
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+                {
+                    if (dgvr.Index % 2 == 0)
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
+                }
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.AllowUserToDeleteRows = false;
+                con.Close();
             }
-            if(j==1)
+            if(j>0)
             {
                 Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
                 con = new SqlConnection(Sql);
@@ -240,8 +270,34 @@ namespace 选课系统
                 cmd.CommandText = "delete from teacherinfo where teacherid='" + Tid + "'";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("删除教师成功！");
+                //
+                //
+                //
+                SqlDataAdapter sda = new SqlDataAdapter("select * from teacherinfo", con);
+                DataSet myds = new DataSet();
+                sda.Fill(myds);
+                dataGridView1.DataSource = myds.Tables[0];
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+                {
+                    if (dgvr.Index % 2 == 0)
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
+                }
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.AllowUserToDeleteRows = false;
+                con.Close();
             }
-            if(k==1)
+            if(k>0)
             {
                 Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
                 con = new SqlConnection(Sql);
@@ -251,8 +307,34 @@ namespace 选课系统
                 cmd.CommandText = "delete from studentselectinfo where courseid='" + Cid + "'";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("退课成功！");
+                //
+                //
+                //
+                SqlDataAdapter sda = new SqlDataAdapter("select * from studentselectinfo", con);
+                DataSet myds = new DataSet();
+                sda.Fill(myds);
+                dataGridView1.DataSource = myds.Tables[0];
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+                {
+                    if (dgvr.Index % 2 == 0)
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
+                }
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.AllowUserToDeleteRows = false;
+                con.Close();
             }
-            if(l==1)
+            if(l>0)
             {
                 Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
                 con = new SqlConnection(Sql);
@@ -262,6 +344,32 @@ namespace 选课系统
                 cmd.CommandText = "delete from courseinfo where courseid='" + Cid + "'";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("删课成功！");
+                //
+                //
+                //
+                SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo", con);
+                DataSet myds = new DataSet();
+                sda.Fill(myds);
+                dataGridView1.DataSource = myds.Tables[0];
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                    dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                foreach (DataGridViewRow dgvr in dataGridView1.Rows)
+                {
+                    if (dgvr.Index % 2 == 0)
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    else
+                    {
+                        dataGridView1.Rows[dgvr.Index].DefaultCellStyle.BackColor = Color.LightYellow;
+                    }
+                    dataGridView1.ReadOnly = true;
+                    dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightSkyBlue;
+                }
+                dataGridView1.AllowUserToAddRows = false;
+                dataGridView1.AllowUserToDeleteRows = false;
+                con.Close();
             }
         }
 

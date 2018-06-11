@@ -45,6 +45,9 @@ namespace 选课系统
                                    + "','" + textBox4.Text.Trim() + "','" + textBox5.Text.Trim()
                                    + "','" + textBox6.Text.Trim() + "')";
                        MessageBox.Show("注册成功！！！");
+                       Form2 frm2 = new Form2();
+                       frm2.Show();
+                       this.Hide();
                        sdr.Close();
                        cmd.ExecuteNonQuery();
                    }
@@ -74,6 +77,9 @@ namespace 选课系统
                                     + "','" + textBox4.Text.Trim() + "','" + textBox5.Text.Trim()
                                     + "','" + textBox6.Text.Trim() + "')";
                         MessageBox.Show("注册成功！！！");
+                        Form2 frm2 = new Form2();
+                        frm2.Show();
+                        this.Hide();
                         sdr.Close();
                         cmd.ExecuteNonQuery();
                     }

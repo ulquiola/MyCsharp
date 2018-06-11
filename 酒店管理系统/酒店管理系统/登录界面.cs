@@ -56,7 +56,7 @@ namespace 酒店管理系统
                 }
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "select * from users where name='" + textBox1.Text.Trim()
+                cmd.CommandText = "select * from users where username='" + textBox1.Text.Trim()
                     + "'and psw='" + textBox2.Text.Trim() + "'";
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
