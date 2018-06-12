@@ -166,14 +166,14 @@ namespace 选课系统
             {
                 if (e.RowIndex >= 0)
                 {
-                    string ID = (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    int ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     con = new SqlConnection(Sql);
-                    SqlDataAdapter sda = new SqlDataAdapter("select * from studentinfo where studentid=" + ID + "", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("select * from studentinfo where ID=" + ID + "", con);
                     DataSet myds = new DataSet();
                     sda.Fill(myds);
                     if (myds.Tables[0].Rows.Count > 0)
                     {
-                        Sid = myds.Tables[0].Rows[0][0].ToString();
+                        Sid = myds.Tables[0].Rows[0][1].ToString();
                     }
                 }
             }
@@ -208,9 +208,9 @@ namespace 选课系统
             {
                 if (e.RowIndex >= 0)
                 {
-                    int intID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                    int ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     con = new SqlConnection(Sql);
-                    SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + intID + "", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + ID + "", con);
                     DataSet myds = new DataSet();
                     sda.Fill(myds);
                     if (myds.Tables[0].Rows.Count > 0)

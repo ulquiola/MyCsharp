@@ -34,7 +34,7 @@ namespace 选课系统
             sda.Fill(myds);
             dataGridView1.DataSource = myds.Tables[0];
             for (int i = 0; i < dataGridView1.Columns.Count; i++)
-                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;                           
+                dataGridView1.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             foreach (DataGridViewRow dgvr in dataGridView1.Rows)
             {
@@ -82,28 +82,28 @@ namespace 选课系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-          string Sql1 = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
-          SqlConnection conn = new SqlConnection(Sql1);
-          if (conn.State == ConnectionState.Closed)
-          {
-              conn.Open();
-          }
-          SqlCommand com = new SqlCommand();
-          com.Connection = conn;
-          com.CommandText = "select * from studentselectinfo where courseid='"+Cid+"'";
-          SqlDataReader sdr = com.ExecuteReader();
-          sdr.Read();
-          if (sdr.HasRows)
-          {
-              MessageBox.Show("您已添加，请勿进行重复操作！！！");
-          }
+            string Sql1 = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(Sql1);
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand com = new SqlCommand();
+            com.Connection = conn;
+            com.CommandText = "select * from studentselectinfo where studentid='" + Form2.Sid + "' and courseid='" + Cid + "'";
+            SqlDataReader sdr = com.ExecuteReader();
+            sdr.Read();
+            if (sdr.HasRows)
+            {
+                MessageBox.Show("您已添加，请勿进行重复操作！！！");
+            }
             else
-          {
-              com.CommandText = "insert into studentselectinfo values('"+Form2.Sid+"','" + Cid + "','" + Cname + "','" + Cteacher + "')";
-              MessageBox.Show("添加成功！！！");
-              sdr.Close();
-              com.ExecuteNonQuery();
-          }
+            {
+                com.CommandText = "insert into studentselectinfo values('" + Form2.Sid + "','" + Cid + "','" + Cname + "','" + Cteacher + "')";
+                MessageBox.Show("添加成功！！！");
+                sdr.Close();
+                com.ExecuteNonQuery();
+            }
         }
     }
 }
