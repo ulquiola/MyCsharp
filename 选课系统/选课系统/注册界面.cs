@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 选课系统
+namespace 教务系统
 {
     public partial class Form3 : Form
     {

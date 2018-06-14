@@ -1,4 +1,4 @@
-﻿namespace 选课系统
+﻿namespace 教务系统
 {
     partial class Form1
     {

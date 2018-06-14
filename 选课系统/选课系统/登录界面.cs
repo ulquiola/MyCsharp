@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 选课系统
+namespace 教务系统
 {
     public partial class Form2 : Form
     {
@@ -53,9 +53,9 @@ namespace 选课系统
                 SqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
                 if (sdr.HasRows)
-                {                    
-                    Form5 frm5 = new Form5();
-                    frm5.Show();
+                {  
+                    Form9 frm9 = new Form9();
+                    frm9.Show();
                     this.Hide();
                     sdr.Close();
                 }
@@ -78,7 +78,7 @@ namespace 选课系统
                     Form7 frm7 = new Form7();
                     frm7.Show();
                     this.Hide();
-                    sdr.Close();
+                    sdr.Close();                    
                 }
                 else
                 {

@@ -9,13 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 选课系统
+namespace 教务系统
 {
     public partial class Form4 : Form
     {
         string Sql;
         SqlConnection con;
-        string Cid, Cname, Cteacher;
+        string Cid, Cname, Cteacher,Clocation,Ctime;
         public Form4()
         {
             InitializeComponent();
@@ -29,7 +29,8 @@ namespace 选课系统
             {
                 con.Open();
             }
-            SqlDataAdapter sda = new SqlDataAdapter("select courseid,coursename,teacher from courseinfo", con);
+            //SqlDataAdapter sda = new SqlDataAdapter("select courseid,coursename,teacher from courseinfo", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select courseid,coursename,teacher from course", con);
             DataSet myds = new DataSet();
             sda.Fill(myds);
             dataGridView1.DataSource = myds.Tables[0];
@@ -59,7 +60,8 @@ namespace 选课系统
             {
                 int intID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                 con = new SqlConnection(Sql);
-                SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + intID + "", con);
+                //SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + intID + "", con);
+                SqlDataAdapter sda = new SqlDataAdapter("select * from course where courseid=" + intID + "", con);
                 DataSet myds = new DataSet();
                 sda.Fill(myds);
                 if (myds.Tables[0].Rows.Count > 0)
@@ -68,6 +70,8 @@ namespace 选课系统
                     Cid = myds.Tables[0].Rows[0][0].ToString();
                     Cname = myds.Tables[0].Rows[0][1].ToString();
                     Cteacher = myds.Tables[0].Rows[0][2].ToString();
+                    Clocation = myds.Tables[0].Rows[0][4].ToString();
+                    Ctime = myds.Tables[0].Rows[0][5].ToString();
                 }
 
             }
@@ -99,7 +103,7 @@ namespace 选课系统
             }
             else
             {
-                com.CommandText = "insert into studentselectinfo values('" + Form2.Sid + "','" + Cid + "','" + Cname + "','" + Cteacher + "')";
+                com.CommandText = "insert into studentselectinfo values('" + Form2.Sid + "','" + Cid + "','" + Cname + "','" + Cteacher + "','"+Clocation+"','"+Ctime+"')";
                 MessageBox.Show("添加成功！！！");
                 sdr.Close();
                 com.ExecuteNonQuery();

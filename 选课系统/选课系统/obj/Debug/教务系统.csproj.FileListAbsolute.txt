@@ -1,0 +1,15 @@
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.csprojResolveAssemblyReference.cache
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form9.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form6.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form4.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form1.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Properties.Resources.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form3.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form2.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.Form7.resources
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\教务系统.csproj.GenerateResource.Cache
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\选课系统.exe
+E:\repository\MyGit\选课系统\选课系统\obj\Debug\选课系统.pdb
+E:\repository\MyGit\选课系统\选课系统\bin\Debug\选课系统.exe.config
+E:\repository\MyGit\选课系统\选课系统\bin\Debug\选课系统.exe
+E:\repository\MyGit\选课系统\选课系统\bin\Debug\选课系统.pdb

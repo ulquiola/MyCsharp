@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 选课系统
+namespace 教务系统
 {
     public partial class Form6 : Form
     {
@@ -29,7 +29,7 @@ namespace 选课系统
             {
                 con.Open();
             }
-            SqlDataAdapter sda = new SqlDataAdapter("select courseid,coursename,teacher from studentselectinfo where studentid='"+Form2.Sid+"'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select courseid,coursename,teacher,location,time from studentselectinfo where studentid='"+Form2.Sid+"'", con);
             DataSet myds = new DataSet();
             sda.Fill(myds);
             dataGridView1.DataSource = myds.Tables[0];

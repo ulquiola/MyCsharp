@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 选课系统
+namespace 教务系统
 {
     public partial class Form7 : Form
     {
@@ -98,6 +98,7 @@ namespace 选课系统
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button6.Hide();
             k = 1;
             i1 = 0; j = 0; l = 0;
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
@@ -135,7 +136,8 @@ namespace 选课系统
             Sql = "Data Source=localhost;Initial Catalog=CourseSelectionSystem;Integrated Security=True";
             con = new SqlConnection(Sql);
             con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo", con);
+            //SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from course", con);
             DataSet myds = new DataSet();
             sda.Fill(myds);
             dataGridView1.DataSource = myds.Tables[0];
@@ -210,7 +212,8 @@ namespace 选课系统
                 {
                     int ID = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
                     con = new SqlConnection(Sql);
-                    SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + ID + "", con);
+                    //SqlDataAdapter sda = new SqlDataAdapter("select * from courseinfo where courseid=" + ID + "", con);
+                    SqlDataAdapter sda = new SqlDataAdapter("select * from course where courseid=" + ID + "", con);
                     DataSet myds = new DataSet();
                     sda.Fill(myds);
                     if (myds.Tables[0].Rows.Count > 0)
@@ -375,20 +378,31 @@ namespace 选课系统
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if (i1 == 1)
+            {
+                Form3 frm3 = new Form3();
+                frm3.Show();
+            }
+            if(j==1)
+            {
+                Form3 frm3 = new Form3();
+                frm3.Show();
+            }
             if (l == 1)
             {
-                Form5 frm5 = new Form5();
-                frm5.Show();
+                Form9 frm9 = new Form9();
+                frm9.Show();
             }
+           
         }
 
-        private void button7_Click(object sender, EventArgs e)
+      /*  private void button7_Click(object sender, EventArgs e)
         {
             if(l==1)
             {
-                Form5 frm5 = new Form5();
-                frm5.Show();
+                Form9 frm9 = new Form9();
+                frm9.Show();
             }
-        }
+        }*/
     }
 }

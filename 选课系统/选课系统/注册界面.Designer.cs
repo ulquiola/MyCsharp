@@ -1,4 +1,4 @@
-﻿namespace 选课系统
+﻿namespace 教务系统
 {
     partial class Form3
     {
@@ -143,7 +143,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 20;
-            this.label5.Text = "专业：";
+            this.label5.Text = "学院：";
             // 
             // label4
             // 

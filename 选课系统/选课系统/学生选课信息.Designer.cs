@@ -1,4 +1,4 @@
-﻿namespace 选课系统
+﻿namespace 教务系统
 {
     partial class Form6
     {
@@ -39,16 +39,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(341, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 229);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(555, 102);
+            this.button1.Location = new System.Drawing.Point(608, 396);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -69,12 +69,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(75, 27);
+            this.groupBox1.Location = new System.Drawing.Point(55, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 375);
+            this.groupBox1.Size = new System.Drawing.Size(642, 287);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "选课信息窗口";
+            this.groupBox1.Text = "我的课程表";
             // 
             // Form6
             // 
